@@ -5,10 +5,9 @@
     "description": "Contact API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://project01-ki4g.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
