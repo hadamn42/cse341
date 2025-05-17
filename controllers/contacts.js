@@ -33,7 +33,7 @@ const createContact = async(req, res) => {
         birthday: req.body.birthday
     };
     const response = await mongodb.getDatabase().db('contact').collection('contact').insertOne(contact);
-    if (response.acknowledged){
+    if (response.result.acknowledged){
         res.status(204).send();
     }else{
         res.status(500).json(response.error || 'Some error occured while creating the contact.');
@@ -51,7 +51,7 @@ const updateContact = async(req, res) => {
         birthday: req.body.birthday
     };
     const response = await mongodb.getDatabase().db('contact').collection('contact').replaceOne({_id: contactId}, contact);
-    if (response.modifiedCount > 0){
+    if (response.result.modifiedCount > 0){
         res.status(204).send();
     }else{
         res.status(500).json(response.error || 'Some error occured while updating the contact.');
@@ -62,7 +62,7 @@ const deleteContact = async(req, res) => {
     //#swagger.tags=['Contacts']
     const contactId = new objectId(req.params.id);
     const response = await mongodb.getDatabase().db('contact').collection('contact').deleteOne({_id: contactId});
-    if (response.deletedCount > 0){
+    if (response.result.deletedCount > 0){
         res.status(204).send();
     }else{
         res.status(500).json(response.error || 'Some error occured while deleting the contact.');

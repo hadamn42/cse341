@@ -24,10 +24,10 @@ Content-Type: application/json
 {
     "firstName": "Jeef",
     "lastName": "Feej",
-    "email": "fixedthis2@gmail.com",
+    "email": "fixedthis23gmail.com",
     "favoriteColor": "Kwerks",
     "birthday": "2011-11-11T07:00:00.000Z"
 }
 
 ### DELETE contact
-DELETE http://localhost:8080/contacts/6827c18cf78f36d600e6b25e
+DELETE http://localhost:8080/contacts/6828a93f3bc69883baa1a7dd
