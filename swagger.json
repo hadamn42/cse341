@@ -5,7 +5,7 @@
     "description": "Contact API",
     "version": "1.0.0"
   },
-  "host": "https://project01-ki4g.onrender.com",
+  "host": "project01-ki4g.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
